@@ -1,0 +1,14 @@
+<h3>ИУ6-35Б, Полубояров Валерий Константинович, билет N22.</h3>
+<h4>Дан массив чисел arr_g. Определить сумму чисел, делящихся на 3 без остатка, и поместить ее вместо последнего элемента массива с нечетным индексом</h4>
+
+
+<%= form_with url: 'array/result', method: :get do |form| %>
+    <p><%= form.label :label, "Введите массив чисел через пробелы" %></p>
+    <p><%= form.text_field :input, value: "3 9 20" %></p>
+    <p><%= form.submit "Посчитать результат" %></p>
+<% end %>
+<% flash.each do |type, msg| %>
+      <div class='alert alert-info'>
+        <%= msg %>
+      </div>
+<% end %>
